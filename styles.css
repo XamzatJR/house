@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+ margin: 0;
+ padding: 0;
+ font-family: "Raleway", sans-serif;
+ box-sizing: border-box;
+}
+
+#canvas {
+    border: 1px solid black;
+    margin: 10px;
+}
+
+header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-block: 20px;
+}
+
+form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form label {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+form input {
+    font-size: 16px;
+    padding: 8px 12px;
+}
+
+.messages {
+    list-style: none;
+    padding: 20px;
+    border: 2px solid #39f;
+    border-radius: 12px;
+    margin-top: 20px;
+    margin-left: 20px;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.messages li {
+    border: 1px solid rebeccapurple;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+button {
+    border-radius: 8px;
+    padding: 0px 24px;
+    width: 88px;
+    height: 40px;
+    background: #248bf2;
+    outline: none;
+    border: none;
+}
+button:hover {
+    background: #39f;
+}
+
+button.selected {
+    outline: 3px solid #52a8ff;
+    background: #1563b1;
+}
+
+.boxes {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 800px;
+    overflow: auto;
+    max-height: 800px;
+    background-color: antiquewhite;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    outline: 4px solid currentColor;
+    border-radius: 8px;
+}
+
+.red {
+    color: rgba(255, 51, 51, 0.713);
+    background-color: rgb(255, 51, 51, 30%);
+}
+.blue {
+    color: rgba(51, 153, 255, 30%);
+    background-color: rgb(51, 153, 255);
+
+    transition: opacity 250ms ease-in-out;
+    z-index: 1;
+}
+
+.blue:hover {
+    opacity: 70%;
+}
+
+/* opacity, transition */

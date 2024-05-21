@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentoring</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="boxes">
+        <div class="box red"></div>
+        <div class="box blue"></div>
+    </main>
+    <!-- <header class="btns-list">
+        <button id="room1" class="room selected">Room 1</button>
+        <button id="room2" class="room">Room 2</button>
+        <button id="room3" class="room">Room 3</button>
+    </header>
+    <main>
+        <form #action="#" >
+            <label for="input">введите сообщение крч</label>
+            <input id="input" type="text" placeholder="сообщение">
+        </form>
+        <ul class="messages">
+
+        </ul>
+    </main> -->
+    <!-- <script>
+        const input = document.querySelector('input')
+        const form = document.querySelector('form')
+        const roomBtns = document.querySelectorAll('.room');
+        const btnsList = document.querySelector('.btns-list');
+        const msgs = document.querySelector('.messages');
+        const socket = new WebSocket('ws://127.0.0.1:8000/chat');
+        
+        const addMsg = (message) => {
+            const msg = document.createElement('li')
+            msg.textContent = message
+            msgs.append(msg)
+        }
+        btnsList.addEventListener('click', (e) => {
+            const id = e.target.id
+            msgs.innerHTML = ''
+            roomBtns.forEach(btn => btn.classList.remove('selected'))
+            e.target.classList.add('selected')
+            socket.send(JSON.stringify({type: 'JOIN', text: null, roomId: id}))
+            addMsg('Вы подключились в чат ' + id );
+        })
+
+        socket.addEventListener('open', () => {
+            addMsg('Вы подключились к вебсокетам')
+        })
+        
+        socket.addEventListener('close', () => {
+            addMsg('Подключение оборвалось')
+        })
+        
+        socket.addEventListener('error', () => {
+            addMsg('Подключение оборвалось из-за ошибки')
+        })
+
+        socket.addEventListener('message', (e) => {
+            const data = JSON.parse(e.data)
+            addMsg(data.text)
+        })
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+            const value = input.value
+            input.value = ''
+            const id = document.querySelector('.selected').id
+            addMsg(value);
+            socket.send(JSON.stringify({type: 'MESSAGE',text: value, roomId: id}))
+        })
+    </script> -->
+
+    <!-- <canvas id="canvas" width="500" height="500"></canvas>
+    <script type="module" src="./main.js"></> -->
+</body>
+
+</html>
